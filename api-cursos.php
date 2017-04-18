@@ -17,6 +17,14 @@ $app->get("/cursos", function() use($db, $app){
     echo json_encode($cursos);
 });
 
+$app->get("/cursos/:id", function($id) use($db, $app){
+    $query = "SELECT * FROM cursos WHERE id = {$id}";
+
+    $curso = $db->query($query);
+
+    echo json_encode($curso -> fetch_assoc());
+});
+
 
 $app->post("/cursos", function() use($db, $app){
     $query = "INSERT into cursos values (NULL, "
@@ -37,7 +45,7 @@ $app->post("/cursos", function() use($db, $app){
 });
 
 $app->put("/cursos/:id", function($id) use($db, $app){
-  
+
   $query="UPDATE cursos SET nombre = '{$app->request->post("nombre")}', descripcion = '{$app->request->post("descripcion")}', "
 			. "foto = '{$app->request->post("foto")}', precio = '{$app->request->post("precio")}', "
       . "tutor = '{$app->request->post("tutor")}' WHERE id={$id}";
