@@ -57,7 +57,7 @@ $app->put("/pedidos/:idPedido", function($idPedido) use($db, $app){
           }else{
               $result = array("STATUS" => "false", "message" => "pedido no borrado.");
           }
-          echo json_encode($result
+          echo json_encode($result);
   });
 
 $app->run();
