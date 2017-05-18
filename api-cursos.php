@@ -17,8 +17,18 @@ $app->get("/cursos", function() use($db, $app){
     echo json_encode($cursos);
 });
 
-$app->get("/cursos/:id", function($id) use($db, $app){
-    $query = "SELECT * FROM cursos WHERE id = {$id}";
+$app->get("/cursos-lista", function() use($db, $app){
+    $query = $db -> query ("SELECT nombre, precio FROM cursos");
+    $cursos=array();
+    while($fila = $query->fetch_assoc()){
+      $cursos[]=$fila;
+    }
+
+    echo json_encode($cursos);
+});
+
+$app->get("/cursos/:idCurso", function($idCurso) use($db, $app){
+    $query = "SELECT * FROM cursos WHERE idCurso = {$idCurso}";
 
     $curso = $db->query($query);
 
@@ -44,11 +54,11 @@ $app->post("/cursos", function() use($db, $app){
   echo json_encode($result);
 });
 
-$app->put("/cursos/:id", function($id) use($db, $app){
+$app->put("/cursos/:idCurso", function($idCurso) use($db, $app){
 
   $query="UPDATE cursos SET nombre = '{$app->request->post("nombre")}', descripcion = '{$app->request->post("descripcion")}', "
 			. "foto = '{$app->request->post("foto")}', precio = '{$app->request->post("precio")}', "
-      . "tutor = '{$app->request->post("tutor")}' WHERE id={$id}";
+      . "tutor = '{$app->request->post("tutor")}' WHERE idCurso={$idCurso}";
 
 	$update=$db->query($query);
 	if($update){
@@ -60,8 +70,8 @@ $app->put("/cursos/:id", function($id) use($db, $app){
 	echo json_encode($result);
   });
 
-  $app->delete("/cursos/:id", function($id) use($db, $app){
-    $query="DELETE FROM cursos WHERE id = {$id}";
+  $app->delete("/cursos/:idCurso", function($idCurso) use($db, $app){
+    $query="DELETE FROM cursos WHERE idCurso = {$idCurso}";
 
           $delete = $db->query($query);
 
