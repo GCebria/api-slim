@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+ <title>SignUp and Login Page FastClassified - Classified Theme</title>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+   <meta name="keywords" content="FastClassified - Classified Theme, Templates , Theme">
+   <meta name="author" content="Sachin Yadav">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="apple-touch-icon" sizes="57x57" href="./icons/fc.ico">
+<link rel="apple-touch-icon" sizes="60x60" href="./icons/fc.ico">
+<link rel="apple-touch-icon" sizes="72x72" href="./icons/fc.ico">
+<link rel="apple-touch-icon" sizes="76x76" href="./icons/fc.ico">
+<link rel="apple-touch-icon" sizes="114x114" href="./icons/fc.ico">
+<link rel="apple-touch-icon" sizes="120x120" href="./icons/fc.ico">
+<link rel="apple-touch-icon" sizes="144x144" href="./icons/fc.ico">
+<link rel="apple-touch-icon" sizes="152x152" href="./icons/fc.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="./icons/fc.ico">
+<link rel="icon" sizes="192x192" href="./icons/fc.ico">
+<link rel="icon" sizes="32x32" href="./icons/fc.ico">
+<link rel="icon" sizes="96x96" href="./icons/fc.ico">
+<link rel="icon" sizes="16x16" href="./icons/fc.ico">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link href="./controller/css/boot.css" rel="stylesheet">
+      <link href="./controller/css/style.css" rel="stylesheet">
+            <link rel="stylesheet" href="./controller/css/bootstrap.offcanvas.min.css"/>
+      <link href="./controller/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+      <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script> <![endif]--> 
+      <style type="text/css">
+        
+         @media screen and (max-width: 768px) {
+         #left-menu-bar-id{ z-index:999999999}
+         .main-part-view{ padding:15px;}
+         .mob-hidden{ display:none; visibility:hidden;}
+         .fixed-search{ display:none; visibility:hidden;}
+         .login-panel-desktop-views-hidden{ display:block !important; visibility:visible !important; padding:10px; background-color:#FFFFFF;}
+         .login-panel-desktop-view{ display:none !important; visibility:hidden !important;}
+         .navbar-header{border-bottom:none !important;}
+         }
+         .navbar-header-top { border-bottom:none; height:20px; border-radius:0px; background-color:#FFFFFF;}
+         .navbar-site{ border-bottom:none; border-radius:0px; padding-bottom:15px;}
+         #main-menu{ visibility:hidden; display:none;}
+      </style>
+      
+   </head>
+   <body>
+         
+ 
+         <!--End Fixed Top Menu Bar-->
+         
+
+         <div class="main-container">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-7" >
+				   <div class="inner-box" style="box-shadow: 0 0 2px 0 #d3cbb8;">
+                     <div class="inner-box">
+                        <h3 class="cat-title">Create your account, Its free</h3>
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <form class="form-horizontal">
+                                 <fieldset>
+                                    <div class="form-group required">
+                                       <label class="col-md-4 control-label">First Name <sup>*</sup></label>
+                                       <div class="col-md-6"><input name="" placeholder="First Name" class="form-control input-md" required="" type="text"></div>
+                                    </div>
+                                    <div class="form-group required">
+                                       <label class="col-md-4 control-label">Last Name <sup>*</sup></label>
+                                       <div class="col-md-6"><input name="textinput" placeholder="Last Name" class="form-control input-md" type="text"></div>
+                                    </div>
+                                    <div class="form-group required">
+                                       <label class="col-md-4 control-label">Phone Number <sup>*</sup></label>
+                                       <div class="col-md-6">
+                                          <input name="textinput" placeholder="Phone Number" class="form-control input-md" type="text">
+                                       </div>
+                                    </div>
+                                    <div class="form-group">
+                                       <label class="col-md-4 control-label">Gender</label>
+                                       <div class="col-md-6">
+                                          <div class="radio"><label for="Gender-0"><input name="Gender" id="Gender-0" value="1" checked="checked" type="radio"> Male </label></div>
+                                          <div class="radio"><label for="Gender-1"><input name="Gender" id="Gender-1" value="2" type="radio"> Female </label></div>
+                                       </div>
+                                    </div>
+                                    <div class="form-group">
+                                       <label class="col-md-4 control-label" for="textarea">About Yourself</label>
+                                       <div class="col-md-6"><textarea class="form-control" id="textarea" name="textarea" placeholder="About"></textarea></div>
+                                    </div>
+                                    <div class="form-group required">
+                                       <label for="inputEmail3" class="col-md-4 control-label">Email <sup>*</sup></label>
+                                       <div class="col-md-6"><input type="email" class="form-control" id="inputEmail3" placeholder="Email"></div>
+                                    </div>
+                                    <div class="form-group required">
+                                       <label for="inputPassword3" class="col-md-4 control-label">Password </label>
+                                       <div class="col-md-6">
+                                          <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                                          <p class="help-block">At least 5 characters</p>
+                                       </div>
+                                    </div>
+                                    <div class="form-group">
+                                       <label class="col-md-4 control-label"></label>
+                                       <div class="col-md-8">
+                                          <div class="termbox mb10"><label class="checkbox-inline" for="checkboxes-1"><input name="checkboxes" id="checkboxes-1" value="1" type="checkbox"> I have read and agree to the <a href="#">Terms &amp; Conditions</a> </label></div>
+                                          <p></p>
+                                          <a class="btn btn-success" href="#">Register</a>
+                                       </div>
+                                    </div>
+                                 </fieldset>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+					 </div>
+                  </div>
+                  
+                  
+                     <div class="col-md-5 page-content" >
+					  <div class="inner-box" style="box-shadow: 0 0 2px 0 #d3cbb8;">
+                     <div class="inner-box category-content">
+                        <h3 class="cat-title">Already registered ? Login</h3>
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <form class="form-horizontal">
+                                 <fieldset>
+                                    <div class="form-group required">
+                                       <label class="col-md-3 control-label">Email</label>
+                                       <div class="col-md-9"><input name="" placeholder="Enter Email Address" class="form-control input-md" required="" type="email"></div>
+                                    </div>
+                                    <div class="form-group required">
+                                       <label class="col-md-3 control-label">Passowrd</label>
+                                       <div class="col-md-9"><input name="password" placeholder="Enter Your Password" class="form-control input-md" type="text"></div>
+                                    </div>
+                                   
+                                   
+                                    <div class="form-group">
+                                       <div class="col-md-12" align="center">
+                                          <a class="btn btn-primary" href="#">Login</a>
+                                       </div>
+                                    </div>
+                                 </fieldset>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+					</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+        
+      <script src="./controller/js/jquery.min.js"></script>
+      <script>
+         $("document").ready(function($){
+             var nav = $('#main-menu');
+         
+             $(window).scroll(function () {
+                 if ($(this).scrollTop() > 190) {
+                     nav.addClass("f-nav");
+         			document.getElementById('main-menu').style.display='block';
+         			document.getElementById('main-menu').style.visibility='visible';
+         			
+                 } else {
+                     nav.removeClass("f-nav");
+         			document.getElementById('main-menu').style.display='none';
+         			document.getElementById('main-menu').style.visibility='hidden';
+         			
+                 }
+             });
+         });
+      </script>
+          <script type="text/javascript">// Top Arrow
+		$(window).scroll(function() {
+				if ($(window).scrollTop() > 200) { 
+					$('a.top').fadeIn('slow'); 
+				} else { 
+					$('a.top').fadeOut('slow');
+				}
+		});
+</script>
+     <script src="controller/js/bootstrap.offcanvas.min.js"></script> 
+      <script src="./controller/js/bootstrap.min.js"></script> 
+   </body>
+</html>

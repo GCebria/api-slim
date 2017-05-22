@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+ <title>Profile Settings Page FastClassified - Classified Theme</title>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+   <meta name="keywords" content="FastClassified - Classified Theme, Templates , Theme">
+   <meta name="author" content="Sachin Yadav">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="apple-touch-icon" sizes="57x57" href="./icons/fc.ico">
+<link rel="apple-touch-icon" sizes="60x60" href="./icons/fc.ico">
+<link rel="apple-touch-icon" sizes="72x72" href="./icons/fc.ico">
+<link rel="apple-touch-icon" sizes="76x76" href="./icons/fc.ico">
+<link rel="apple-touch-icon" sizes="114x114" href="./icons/fc.ico">
+<link rel="apple-touch-icon" sizes="120x120" href="./icons/fc.ico">
+<link rel="apple-touch-icon" sizes="144x144" href="./icons/fc.ico">
+<link rel="apple-touch-icon" sizes="152x152" href="./icons/fc.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="./icons/fc.ico">
+<link rel="icon" sizes="192x192" href="./icons/fc.ico">
+<link rel="icon" sizes="32x32" href="./icons/fc.ico">
+<link rel="icon" sizes="96x96" href="./icons/fc.ico">
+<link rel="icon" sizes="16x16" href="./icons/fc.ico">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link href="./controller/css/boot.css" rel="stylesheet">
+      <link href="./controller/css/style.css" rel="stylesheet">
+            <link rel="stylesheet" href="./controller/css/bootstrap.offcanvas.min.css"/>
+      <link href="./controller/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+      <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script> <![endif]-->
+      <style type="text/css">
+
+         @media screen and (max-width: 768px) {
+         #left-menu-bar-id{ z-index:999999999}
+         .main-part-view{ padding:15px;}
+         .mob-hidden{ display:none; visibility:hidden;}
+         .fixed-search{ display:none; visibility:hidden;}
+         .login-panel-desktop-views-hidden{ display:block !important; visibility:visible !important; padding:10px; background-color:#FFFFFF;}
+         .login-panel-desktop-view{ display:none !important; visibility:hidden !important;}
+         .navbar-header{border-bottom:none !important;}
+         }
+
+
+      </style>
+   </head>
+   <body>
+
+
+         <!--  1
+
+.navbar-default { margin : 0 !important; }
+
+--><nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Aula Espill</a>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <?php if(!isset($_SESSION['nombre'])){?>
+              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-log-in" data-toggle="modal" data-target="#login-modal"></span> Login</a></li>
+
+              <?php }else {?>
+              <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-shopping-cart" data-toggle="modal" data-target="#carrito-modal"></span></a></li>
+
+              <li><a href="#">
+                <span class="glyphicon glyphicon-user"> </span>
+                <?php echo $_SESSION['nombre']?>
+                  </a></li>
+              <li><a href="logout.php" ><span class="glyphicon glyphicon-log-out"></span> ¿No eres tu?</a></li>
+              <?php } ?>
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+         <div class="main-container">
+            <div class="container">
+               <div class="row">
+          <div class="profile-nav col-md-3">
+            <div class="panel navbar-offcanvas navbar-offcanvas-touch" id="left-menu-bar-id">
+                <div class="user-heading round">
+                    <a href="#">
+                        <img src="user.png" alt="">
+                    </a>
+                    <h1>Tu perfil</h1>
+                </div>
+
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="profile.html"><span class="glyphicon glyphicon-user"></span> &nbsp;Perfil</a></li>
+                  <li><a href="myfaveads.html"><span class="glyphicon glyphicon-star"></span> &nbsp;Mis cursos</a></li>
+                  <li><a href="userprofile-myads.html"><span class="glyphicon glyphicon-bullhorn"></span>  &nbsp;Alertas</a></li>
+                  <li><a href="profile-setting.html"> <span class="glyphicon glyphicon-pencil"></span> &nbsp;Editar perfil</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="profile-info col-md-9" style="box-shadow: 0 0 2px 0 #d3cbb8; background-color:#FFFFFF; padding-top:15px;">
+
+              <h2 class="cat-title"><span class="glyphicon glyphicon-pencil"></span>&nbsp;Actualizar Perfil</h2>
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <form class="form-horizontal">
+                                 <fieldset>
+                                    <div class="form-group required">
+                                       <label class="col-md-4 control-label">Nombre</label>
+                                       <div class="col-md-6"><input name="" value="Sachin" class="form-control input-md" required="" type="text"></div>
+                                    </div>
+                                    <div class="form-group required">
+                                       <label class="col-md-4 control-label">Apellidos</label>
+                                       <div class="col-md-6"><input name="textinput" value="Yadav" class="form-control input-md" type="text"></div>
+                                    </div>
+                                    <div class="form-group required">
+                                       <label class="col-md-4 control-label">Teléfono</label>
+                                       <div class="col-md-6">
+                                          <input name="textinput" class="form-control input-md" type="text" value="9478825067">
+                                       </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                       <label class="col-md-4 control-label" for="textarea">Dirección</label>
+                                       <div class="col-md-6"><textarea class="form-control" rows="5" id="textarea" name="textarea">I am a web & Graphics Designer , I want to do something new & creative in web & Graphing Designing by implementing some crazy and inonnative ideas.</textarea></div>
+                                    </div>
+                                    <div class="form-group required">
+                                       <label for="inputEmail3" class="col-md-4 control-label">Email</label>
+                                       <div class="col-md-6"><input type="email" class="form-control" id="inputEmail3" value="fastlearning1212@gmail.com" readonly></div>
+                                    </div>
+                                    <div class="form-group required">
+                                       <label for="inputPassword3" class="col-md-4 control-label">Contraseña </label>
+                                       <div class="col-md-6">
+                                          <input type="password" class="form-control" id="inputPassword3" placeholder="**********">
+                                       </div>
+                                    </div>
+                                    <div class="form-group">
+                                       <label class="col-md-4 control-label"></label>
+                                       <div class="col-md-8">
+                                          <a class="btn btn-success" href="#">Update</a>&nbsp;&nbsp;<a class="btn btn-danger" href="#">Cancel</a>
+                                       </div>
+                                    </div>
+                                 </fieldset>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+          <script src="./controller/js/jquery.min.js"></script>
+      <script>
+         $("document").ready(function($){
+             var nav = $('#main-menu');
+
+             $(window).scroll(function () {
+                 if ($(this).scrollTop() > 190) {
+                     nav.addClass("f-nav");
+         			document.getElementById('main-menu').style.display='block';
+         			document.getElementById('main-menu').style.visibility='visible';
+
+                 } else {
+                     nav.removeClass("f-nav");
+         			document.getElementById('main-menu').style.display='none';
+         			document.getElementById('main-menu').style.visibility='hidden';
+
+                 }
+             });
+         });
+      </script>
+          <script type="text/javascript">// Top Arrow
+		$(window).scroll(function() {
+				if ($(window).scrollTop() > 200) {
+					$('a.top').fadeIn('slow');
+				} else {
+					$('a.top').fadeOut('slow');
+				}
+		});
+</script>
+     <script src="controller/js/bootstrap.offcanvas.min.js"></script>
+      <script src="./controller/js/bootstrap.min.js"></script>
+   </body>
+</html>
