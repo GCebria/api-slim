@@ -24,17 +24,25 @@ $app->get("/pedidos/:idPedido", function($idPedido) use($db, $app){
 
 
 $app->post("/pedidos", function() use($db, $app){
+$cursos = json_decode($app->request->post("cursos"));
+
+echo json_encode($cursos);
     $query = "INSERT into pedidos values (NULL, "
               . "'{$app->request->post("fechaPedido")}',"
               . "'{$app->request->post("idUsuario")}'"
               .")";
   $insert = $db->query($query);
+  foreach ($cursos as $curso) {
+  $query = "INSERT into detallespedido values (null, '$curso->idCurso', '$curso->precio', (select MAX(idPedido) from pedidos))";
+  $insert = $db ->query($query);
+  };
   if($insert){
-      $result = array("STATUS" => "true", "message" => "pedido insertado correctamente.");
+    $result = array("STATUS" => "true", "message" => "pedido insertado correctamente.");
   }else{
-      $result = array("STATUS" => "false", "message" => "pedido no insertado.");
+    $result = array("STATUS" => "false", "message" => "pedido no insertado.");
   }
   echo json_encode($result);
+
 });
 
 $app->put("/pedidos/:idPedido", function($idPedido) use($db, $app){
